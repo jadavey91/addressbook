@@ -2,9 +2,16 @@
   text-align: center;
 }
 
+.addressInput {
+  background-color: cornflowerblue;
+}
+
+.numberInput {
+  background-color: cornsilk;
+}
+
 ul {
   display: flex;
-  flex-direction: column;
-  border: 5px black;
-  border-radius: 50%;
+  flex-direction: row;
+ justify-content: center;
 }
