@@ -4,8 +4,8 @@ import "./App.css";
 class App extends Component {
 
   state = {
-    address : ["an address",],
-    number : ["a number",],
+    address : ["an address ",],
+    number : ["a number ",],
     currentAddress : "",
     currentNumber: ""
   }
@@ -13,7 +13,7 @@ recordAddressHandler = (event) => {
   console.log(event.target.value)
   let add = event.target.value
   this.setState({
-    address : add
+    currentAddress : add
   })
 }
 
@@ -28,7 +28,7 @@ recordNumberHandler = (event) => {
   console.log(event.target.value)
   let num = event.target.value
   this.setState({
-    number : num
+    currentNumber : num
   })
 }
 
@@ -45,7 +45,7 @@ addNumberHandler = () => {
         <div className="addressInput">
         <input
           type="text"
-          onSubmit={this.recordAddressHandler}
+          onChange={this.recordAddressHandler}
           value={this.state.currentAddress}
         />
         <button onClick={this.addAddressHandler}>Add Address</button>
@@ -54,7 +54,7 @@ addNumberHandler = () => {
         <div className="numberInput">
         <input
           type="number"
-          onSubmit={this.recordNumberHandler}
+          onChange={this.recordNumberHandler}
           value={this.state.currentNumber}
         />
         <button onClick={this.addNumberHandler}>Add Number</button>
